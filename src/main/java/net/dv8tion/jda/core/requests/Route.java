@@ -159,9 +159,9 @@ public class Route
     {
         this.method = method;
         this.route = route;
-        this.paramCount = StringUtils.countMatches(route, '{'); //All parameters start with {
+        this.paramCount = StringUtils.countMatches(route, "{"); //All parameters start with {
 
-        if (paramCount != StringUtils.countMatches(route, '}'))
+        if (paramCount != StringUtils.countMatches(route, "}"))
             throw new IllegalArgumentException("An argument does not have both {}'s for route: " + method + "  " + route);
 
         //Create a String.format compilable route for parameter compiling.
